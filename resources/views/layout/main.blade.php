@@ -62,6 +62,12 @@
                     button:"Ok",
              });
          </script>
+     @elseif (Session::has('message_sent'))
+         <script>
+             swal("Thank You.", "{!! Session::get('message_sent') !!}", "success", {
+                    button:"Ok",
+             });
+         </script>
     @endif
     </body>
 </html>

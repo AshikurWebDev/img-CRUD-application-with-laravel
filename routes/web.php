@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\EditorController;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\ImageController;
@@ -36,6 +37,10 @@ Route::get('/edit-student/{id}', [StudentController::class, 'editstudent']);
 Route::post('/update-student', [StudentController::class, 'updateStudent']);
 
 Route::get('/deleted-student/{id}', [StudentController::class, 'deleteStudent']);
+
+Route::get('/contact', [ContactController::class, 'contact']);
+
+Route::post('/send-mail', [ContactController::class, 'sendEmail']);
 
 
 
