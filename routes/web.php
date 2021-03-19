@@ -4,6 +4,7 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\EditorController;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\ImageController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\StudentController;
 use Illuminate\Support\Facades\Route;
 
@@ -41,6 +42,12 @@ Route::get('/deleted-student/{id}', [StudentController::class, 'deleteStudent'])
 Route::get('/contact', [ContactController::class, 'contact']);
 
 Route::post('/send-mail', [ContactController::class, 'sendEmail']);
+
+Route::get('/add-product', [ProductController::class, 'addProducts']);
+
+Route::get('/search', [ProductController::class, 'search']);
+
+Route::get('/autocomplete', [ProductController::class, 'autocomplete']);
 
 
 
