@@ -6,6 +6,7 @@ use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\ImageController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\StudentController;
+use App\Http\Controllers\ZipController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -48,6 +49,8 @@ Route::get('/add-product', [ProductController::class, 'addProducts']);
 Route::get('/search', [ProductController::class, 'search']);
 
 Route::get('/autocomplete', [ProductController::class, 'autocomplete']);
+
+Route::get('/zip', [ZipController::class, 'ZipFile']);
 
 
 
